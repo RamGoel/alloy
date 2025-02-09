@@ -7,6 +7,29 @@ body {
   font-family: 'Assistant', sans-serif;
 }
 
+:root {
+  --background: #FFFFFF;
+  --text-primary: #000000;
+  --text-secondary: rgba(0, 0, 0, 0.556);
+  --editor: #111827;
+  --border: #2626263c;
+  --hover: #c7c4c4;
+  --foreground: #f3f4f6;
+
+  .dark {
+    --background: #171717;
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.516);
+    --editor: #0a0a0a;
+    --border: #404040;
+    --hover: #424242;
+    --foreground: #262626;
+  }
+
+}
+
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -22,7 +45,7 @@ body {
 }
 
 .mobile-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--background);
   cursor: pointer;
 }
 

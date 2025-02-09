@@ -22,14 +22,14 @@ export default function SearchBox() {
       data-testid="search-container"
     >
       <div className="">
-        <div className="flex items-center bg-gray-200 border border-gray-200 rounded px-2">
-          <Search className="text-gray-900 mr-2" />
+        <div className="flex items-center gap-2  border border-border rounded px-2">
+          <Search className="text-text_secondary w-5 h-5" />
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search commands..."
-            className="bg-transparent border-none outline-none w-full py-2 text-gray-900 font-assistant"
+            className="bg-transparent border-none outline-none w-full py-2 text-text_primary placeholder:opacity-60 font-assistant"
             data-testid="search-input"
           />
         </div>
@@ -53,7 +53,7 @@ export default function SearchBox() {
           onClick={() =>
             scrollRef.current?.scrollTo({ top: 0, behavior: 'smooth' })
           }
-          className="fixed bottom-4 right-4 bg-gray-700 hover:bg-gray-800 text-white rounded-full p-3 shadow-lg transition-all duration-300"
+          className="fixed bottom-4 right-4 bg-foreground hover:bg-hover text-text_primary rounded-full p-3 shadow-lg transition-all duration-300"
           aria-label="Scroll to top"
           data-testid="scroll-to-top"
         >

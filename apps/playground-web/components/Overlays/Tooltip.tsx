@@ -15,7 +15,7 @@ const Tooltip: React.FC<TooltipProps> = ({ message }) => {
     <div className="relative flex items-center">
       {/* (i) Icon */}
       <span
-        className="flex items-center justify-center text-gray-500 cursor-pointer hover:text-gray-700"
+        className="flex items-center justify-center text-text_secondary cursor-pointer hover:text-text_primary"
         onMouseEnter={() => setVisible(true)} // Show tooltip on hover over icon
         onMouseLeave={() => setVisible(false)} // Hide tooltip when not hovering
       >
@@ -24,7 +24,7 @@ const Tooltip: React.FC<TooltipProps> = ({ message }) => {
 
       {/* Tooltip Content */}
       {visible && (
-        <div className="absolute bottom-full mb-1 w-48 p-2 text-xs text-white bg-[#374151] rounded shadow-lg">
+        <div className="absolute bottom-full mb-1 w-48 p-2 text-xs text-text_primary bg-[#374151] rounded shadow-lg">
           {message}
         </div>
       )}

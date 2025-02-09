@@ -20,16 +20,12 @@ export default function Shell({ onCommandExecuted }: ShellProps) {
   return (
     <div
       ref={terminalRef}
-      className="flex flex-col h-full bg-gray-900 text-white font-mono text-sm overflow-auto top-0 pl-4 pb-2"
+      className="flex flex-col h-full text-text_primary border-0 font-mono text-sm overflow-auto top-0 pl-4 pb-2"
       data-testid="terminal"
       onClick={() => inputRef.current?.focus()}
     >
       {output.map((line, index) => (
-        <div
-          key={index}
-          data-testid="terminal-output"
-          className="text-white p-1"
-        >
+        <div key={index} data-testid="terminal-output" className=" p-1">
           {line.split('\n').map((subLine, subIndex, arr) => (
             <span key={subIndex}>
               {subLine}
@@ -48,7 +44,7 @@ export default function Shell({ onCommandExecuted }: ShellProps) {
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
             data-testid="shell-input"
-            className="w-full bg-transparent outline-none text-white"
+            className="w-full bg-transparent outline-none"
           />
         </div>
       </div>

@@ -31,17 +31,14 @@ export default function CommandPage({
   return (
     <div
       data-testid="command-page"
-      className="w-full p-6 bg-gray-100 text-white rounded-lg border border-gray-700/30 mb-4"
+      className="w-full p-6 text-text_primary rounded-lg border border-border mb-4"
     >
-      <h2
-        data-testid="command-title"
-        className="text-gray-700 text-2xl font-semibold mb-4"
-      >
+      <h2 data-testid="command-title" className="text-2xl font-semibold mb-4">
         {title}
       </h2>
 
       <div className="flex items-center justify-between mb-4 pt-4">
-        <h3 className="text-gray-700 text-xl font-semibold">Syntax</h3>
+        <h3 className="text-xl font-semibold">Syntax</h3>
         <div className="flex flex-row">
           {isCopied && (
             <div
@@ -53,7 +50,7 @@ export default function CommandPage({
           )}
           <button
             onClick={handleCopy}
-            className="text-gray-500 hover:text-gray-700 flex items-center ml-4"
+            className="text-text_secondary hover:text-text_primary flex items-center ml-4"
             title="Copy to clipboard"
             data-testid="copy-button"
           >
@@ -62,20 +59,18 @@ export default function CommandPage({
         </div>
       </div>
 
-      <div className="bg-gray-200 rounded-lg relative overflow-x-auto p-4">
+      <div className="bg-foreground rounded-lg relative overflow-x-auto p-4">
         <code
           data-testid="command-syntax"
-          className="font-mono text-sm text-gray-700 block w-full"
+          className="font-mono text-sm block w-full"
         >
           {syntax}
         </code>
       </div>
 
-      <h2 className="text-gray-700 text-xl font-semibold pt-4 mb-4">
-        Description
-      </h2>
-      <div className="bg-gray-200 p-4 rounded-lg mb-4">
-        <p data-testid="command-body" className="text-md text-gray-900">
+      <h2 className="text-xl font-semibold pt-4 mb-4">Description</h2>
+      <div className="bg-foreground p-4 rounded-lg mb-4">
+        <p data-testid="command-body" className="text-md ">
           {body}
         </p>
       </div>

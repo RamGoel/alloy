@@ -35,7 +35,7 @@ function Header() {
             unoptimized
           />
         </Link>
-        <h2 className="font-light text-2xl">PlayGround</h2>
+        <h2 className="font-light text-text_primary text-2xl">PlayGround</h2>
       </div>
       <div className="flex items-center gap-2">
         <Link
@@ -47,7 +47,7 @@ function Header() {
         >
           <Button
             variant="outline"
-            className="w-full mt-2 gap-2 border-1 border-gray-700 text-gray-700 hover:scale-95 transition  flex items-center justify-center rounded-lg"
+            className="w-full mt-2 gap-2 border-1 border-border text-text_primary hover:scale-95 transition flex items-center justify-center rounded-lg"
             data-testid="submit-issue-button"
           >
             <GitHub fontSize="small" />
@@ -57,7 +57,7 @@ function Header() {
         <Button
           onClick={() => setIsOpen(true)}
           variant="outline"
-          className="mt-2 hidden lg:flex w-fit gap-2 border-1 border-gray-700 !bg-gray-700 hover:scale-95 transition text-white items-center justify-center rounded-lg"
+          className="mt-2 hidden lg:flex w-fit gap-2 border-1 border-border !bg-editor !dark:bg-foreground hover:scale-95 transition text-white dark:text-text_primary  items-center justify-center rounded-lg"
           data-testid="submit-issue-button"
         >
           <Terminal className="h-4 w-4" />
@@ -80,7 +80,7 @@ function Commands() {
       >
         <div
           data-testid="searchbox-wrapper"
-          className="h-full w-full flex-grow border border-gray-400 bg-gray-100 p-4 pb-0 rounded-lg shadow-md"
+          className="h-full w-full flex-grow border border-border bg-background p-4 pb-0 rounded-lg shadow-md"
         >
           <SearchBox />
         </div>
@@ -94,7 +94,7 @@ function PlaygroundUI() {
   return (
     <div
       data-testid="playground"
-      className={`p-4 lg:p-0 flex flex-col h-screen bg-white text-gray-900 ${isOpen ? 'transition-all duration-200 lg:ml-[4%] lg:mr-[28%]' : 'lg:mx-[4%] mx-auto'}`}
+      className={`p-4 lg:p-0 flex flex-col h-screen ${isOpen ? 'transition-all duration-200 lg:ml-[4%] lg:mr-[28%]' : 'lg:mx-[4%] mx-auto'}`}
     >
       <Header />
 

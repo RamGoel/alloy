@@ -14,11 +14,17 @@ const config: Config = {
         Assistant: ['Assistant'],
       },
       colors: {
-        background: 'var(--background)',
+        primary: 'var(--background)',
+        border: 'var(--border)',
+        text_primary: 'var(--text-primary)',
+        text_secondary: 'var(--text-secondary)',
+        editor: 'var(--editor)',
+        hover: 'var(--hover)',
         foreground: 'var(--foreground)',
       },
     },
   },
   plugins: [],
+  darkMode: 'class',
 };
 export default config;

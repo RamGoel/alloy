@@ -8,19 +8,19 @@ const CommandPanel = () => {
 
   return (
     <div
-      className={`h-[100vh] px-4 bg-white border-l border-gray-200 transition-all duration-300 w-[25%] fixed top-0 right-0 ${
+      className={`h-[100vh] px-4  border-l border-border transition-all duration-300 w-[25%] fixed top-0 right-0 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
       <div className="flex py-4 items-center justify-between gap-2">
-        <div className="flex items-center gap-2">
+        <div className="flex text-text_primary items-center gap-2">
           <Terminal className="w-5 h-5" />
           <p className="text-lg font-medium">DiceDB Commands</p>
         </div>
 
         <button
           onClick={() => setIsOpen(false)}
-          className="flex items-center hover:cursor-pointer hover:bg-gray-100 rounded-md p-1 gap-2"
+          className="flex items-center hover:cursor-pointer hover:text-text_primary hover:bg-hover text-text_secondary rounded-md p-1 gap-2"
         >
           <X className="w-5 h-5" />
         </button>
